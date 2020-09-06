@@ -1,0 +1,23 @@
+.ads {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 1250px) {
+    grid-column: span 3;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+}
+
+@for $i from 1 through 3 {
+  .ad:nth-child(#{$i}) {
+    background-color: lighten($clr-green, $i * 5%);
+    background-image: url(https://via.placeholder.com/600/#{$i*145});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 15rem;
+    width: 100%;
+  }
+}

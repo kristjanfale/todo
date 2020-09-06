@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$clr-gray: rgb(121, 121, 121);
+$clr-light-gray: rgb(228, 228, 228);
+$clr-white: #fff;
+$clr-black: #000;
+$clr-green: rgb(1, 105, 14);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.1rem, calc(1vw + 1.1rem), 2.5rem);
+}
+
+// CONTAINER
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
